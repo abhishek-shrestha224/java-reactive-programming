@@ -29,7 +29,7 @@ To work with the examples in this repository, you'll need:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/abhishek-shrestha224/java-reactive-programming.git]
+   git clone https://github.com/abhishek-shrestha224/java-reactive-programming.git
    cd project-reactor-learning
    ```
 
