@@ -1,10 +1,9 @@
 package org.example.reactive;
 
-import reactor.core.publisher.Flux;
-
 import java.time.Duration;
 import java.util.List;
 import java.util.logging.Logger;
+import reactor.core.publisher.Flux;
 
 public class MyFlux {
 
@@ -12,14 +11,19 @@ public class MyFlux {
 
   public static void main(String[] args) throws InterruptedException {
     MyFlux myFlux = new MyFlux();
-    myFlux.getEmptyFlux().subscribe(value -> logger.info(String.valueOf(value)));
+    myFlux
+        .getEmptyFlux()
+        .subscribe(
+            value -> logger.info(Message.RECEIVED + value),
+            error -> logger.severe(Message.ERROR + error.getMessage()),
+            () -> logger.info(Message.COMPLETED));
     myFlux.getFluxFromValues("A", "B", "C").subscribe(logger::info);
     myFlux.getFluxFromIterable(List.of("X", "Y", "Z")).subscribe(logger::info);
     myFlux
         .errorFlux()
         .subscribe(
-            value -> logger.info(String.valueOf(value)),
-            error -> logger.severe("Error: " + error.getMessage()));
+            value -> logger.info(Message.RECEIVED + value),
+            error -> logger.severe(Message.ERROR + error.getMessage()));
     myFlux.counter().subscribe(value -> logger.info(String.valueOf(value)));
     Thread.sleep(2000);
   }
@@ -37,7 +41,7 @@ public class MyFlux {
   }
 
   Flux<String> errorFlux() {
-    return Flux.error(new IllegalStateException("Something went wrong!"));
+    return Flux.error(new IllegalStateException(Message.ERROR_OCCURRED));
   }
 
   Flux<Long> counter() {
