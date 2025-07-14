@@ -1,4 +1,4 @@
-package org.example;
+package org.example.reactive;
 
 import reactor.core.publisher.Flux;
 
