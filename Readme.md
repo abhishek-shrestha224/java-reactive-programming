@@ -1,10 +1,13 @@
 # Project Reactor Hands-On Learning
 
-Welcome to my hands-on learning repository for Project Reactor in Java! This repository contains my journey of exploring reactive programming concepts through practical examples and exercises using Project Reactor.
+Welcome to my hands-on learning repository for Project Reactor in Java! This repository contains my journey of exploring
+reactive programming concepts through practical examples and exercises using Project Reactor.
 
 ## 📌 About
 
-This repository is my personal learning space where I experiment with Project Reactor, a foundational library for building reactive applications on the JVM. Here, I document my progress through various reactive programming concepts, from basic to advanced.
+This repository is my personal learning space where I experiment with Project Reactor, a foundational library for
+building reactive applications on the JVM. Here, I document my progress through various reactive programming concepts,
+from basic to advanced.
 
 ## 🚀 What's Inside
 
@@ -35,7 +38,7 @@ To work with the examples in this repository, you'll need:
 
 2. Build the project:
    ```bash
-   mvn clean install
+   ./mvnw clean install
    ```
 
 ## 📚 Learning Path
@@ -43,24 +46,25 @@ To work with the examples in this repository, you'll need:
 The repository is organized by concepts, with each having its own package and examples:
 
 1. **Core Concepts**
-   - Hello World with Reactor
-   - Flux vs Mono
-   - Subscribing to Publishers
+    - Hello World with Reactor
+    - Flux vs Mono
+    - Subscribing to Publishers
 
 2. **Operators**
-   - Transformation operators (map, flatMap)
-   - Filtering operators (filter, take, skip)
-   - Combining operators (merge, zip, concat)
+    - Transformation operators (map, flatMap)
+    - Filtering operators (filter, take, skip)
+    - Combining operators (merge, zip, concat)
 
 3. **Advanced Topics**
-   - Backpressure strategies
-   - Schedulers and threading
-   - Hot vs Cold Publishers
-   - Testing with StepVerifier
+    - Backpressure strategies
+    - Schedulers and threading
+    - Hot vs Cold Publishers
+    - Testing with StepVerifier
 
 ## 🤝 Contributing
 
-While this is primarily a personal learning repository, I welcome suggestions, corrections, or additional examples that could help others learn Project Reactor. Feel free to open issues or pull requests!
+While this is primarily a personal learning repository, I welcome suggestions, corrections, or additional examples that
+could help others learn Project Reactor. Feel free to open issues or pull requests!
 
 ## 📖 Resources
 
